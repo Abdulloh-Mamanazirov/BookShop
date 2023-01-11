@@ -8,6 +8,9 @@ h1 {
   font-family: "Seymour One", sans-serif;
   margin-right: 50px;
 }
+#myCart{
+  width: 25%;
+}
 .cards {
   padding-top: 15px;
 }
@@ -65,5 +68,16 @@ p::-webkit-scrollbar {
     }
     h1{
         margin-right: 0;
+    }
+}
+@media (max-width:400px) {
+  #navbar{
+    padding: 0;
+  }
+  h1{
+    padding-top: 10px;
+  }
+    #myCart{
+      width: 40%;
     }
 }

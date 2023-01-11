@@ -1,0 +1,14 @@
+body{
+    padding-bottom: 70px;
+}
+button.position-absolute{
+    border-radius: 50%;
+    right: 0;
+    top: 150px;
+}
+@media (max-width:750px){
+    .total{
+        flex-direction: column;
+        padding: 0 0;
+    }
+}

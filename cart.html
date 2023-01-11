@@ -7,12 +7,12 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
     <link rel="stylesheet" href="styles/cart.css">
-    <title>Bookshop</title>
+    <title>IT Bookshop</title>
 </head>
 <body>
-
-    <table class="table">
-  <thead>
+    <h1 class="text-center text-primary fw-bold py-3 m-0 border-dark border-bottom border-3">My Cart <i class="fa fa-shopping-cart" aria-hidden="true"></i></h1>
+    <table class="table table-striped table-hover">
+  <thead class="bg-dark-subtle ">
     <tr>
       <th scope="col">#</th>
       <th scope="col">Image</th>
@@ -25,9 +25,16 @@
   <tbody class="table-group-divider">
   </tbody>
 </table>
-    
+    <div class="total text-bg-secondary px-4 py-3 position-fixed bottom-0 end-0 w-100 d-flex align-items-center justify-content-between gap-5">
+      <div class="d-flex align-items-center gap-5">
+        <h3 class="m-0">Total Items: <span id="totalItems">0</span></h3>
+        <h3 class="m-0">Total Price: $<span id="totalPrice">0</span></h3>
+        <button class="btn btn-primary">Buy Now</button>
+      </div>
+      <a href="./index.html" class="btn btn-info"><i class="fa-solid fa-arrow-right-from-bracket" style="transform: rotate(180deg);"></i> All Books</a>
+    </div>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.min.js" integrity="sha384-cuYeSxntonz0PPNlHhBs68uyIAVpIIOZZ5JqeqvYYIcEL727kskC66kF92t6Xl2V" crossorigin="anonymous"></script>
-    <script src="js/cart.js"></script>
+    <script type="module" src="js/cart.js"></script>
 </body>
 </html>
