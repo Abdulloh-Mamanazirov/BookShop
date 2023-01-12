@@ -13,26 +13,35 @@ let totalPrice = document.querySelector('#totalPrice')
 let bookInfo = localStorage.getItem('bookInfo')
 bookInfo = JSON.parse(bookInfo)
 bookInfo.forEach(el => {
-  console.log(el);
   let num = 1
   num++
   let tr = document.createElement('tr')
   tr.innerHTML = `
       <tr>
-      <th scope="row">${num}</th>
+      <th scope="row"></th>
         <td><img src="${el.img}" alt="image" width="120px"></td>
         <td class="fw-bolder">${el.name}</td>
         <td>${el.desc}</td>
-        <td>${el.price}</td>
+        <td class="h5"><span class="badge bg-primary">${el.price}</span></td>
         <td><a href="${el.link}" target="_blank">Link</a></td>
       </tr>
   `;
   
   tbody.appendChild(tr)
   
-  let bookPrice = +el.price.slice(1);
-  totalPrice.innerHTML = bookPrice
-  
   totalItems.innerHTML = bookInfo.length;
 });
 
+let price = [];
+bookInfo.map(el => {
+  let bookPrice = +el.price.slice(1);
+  price.push(bookPrice);
+
+  const initialValue = 0;
+  const sum = price.reduce(
+    (accumulator, currentValue) => accumulator + currentValue,
+    initialValue
+    );
+
+  totalPrice.innerHTML = sum;
+})
