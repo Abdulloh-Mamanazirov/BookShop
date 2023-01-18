@@ -45,11 +45,11 @@ function booksData(books) {
     addCart.textContent = "🛒";
     addCart.addEventListener("click", (e) => {
       let Info = {
-        img: e.path[2].childNodes[1].currentSrc,
-        name: e.path[2].childNodes[3].innerText,
-        desc: e.path[2].childNodes[5].innerText,
-        price: e.path[2].childNodes[7].innerText,
-        link: e.path[2].childNodes[9].childNodes[0].href,
+        img: e.composedPath()[2].childNodes[1].currentSrc,
+        name: e.composedPath()[2].childNodes[3].innerText,
+        desc: e.composedPath()[2].childNodes[5].innerText,
+        price: e.composedPath()[2].childNodes[7].innerText,
+        link: e.composedPath()[2].childNodes[9].childNodes[0].href,
       };
       let bookInfo = JSON.parse(localStorage.bookInfo || "[]");
       bookInfo.push(Info);

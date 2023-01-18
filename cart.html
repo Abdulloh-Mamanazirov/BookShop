@@ -10,16 +10,16 @@
     <title>IT Bookshop</title>
 </head>
 <body>
-    <h1 class="text-center text-primary fw-bold py-3 m-0 border-dark border-bottom border-3">My Cart <i class="fa fa-shopping-cart" aria-hidden="true"></i></h1>
+    <h1 class="text-center text-primary fw-bold py-3 m-0 border-dark border-bottom border-3" onclick="e()">My Cart <i class="fa fa-shopping-cart" aria-hidden="true"></i></h1>
     <table class="table table-hover">
   <thead class="bg-dark-subtle ">
     <tr>
-      <th scope="col"></th>
       <th scope="col">Image</th>
       <th scope="col">Name</th>
       <th scope="col">Description</th>
       <th scope="col">Price</th>
       <th scope="col">About</th>
+      <th scope="col"></th>
     </tr>
   </thead>
   <tbody class="table-group-divider">
@@ -30,6 +30,7 @@
         <h3 class="m-0">Total Items: <span id="totalItems">0</span></h3>
         <h3 class="m-0">Total Price: $<span id="totalPrice">0</span></h3>
         <button class="btn btn-primary">Buy Now</button>
+        <button class="btn btn-danger" id="clearCart">Clear Cart</button>
       </div>
       <a href="./index.html" class="btn btn-info"><i class="fa-solid fa-arrow-right-from-bracket" style="transform: rotate(180deg);"></i> All Books</a>
     </div>
